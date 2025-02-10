@@ -73,6 +73,7 @@ echo Deseja agendar esse script para rodar automaticamente? (S/N)
 set /p resposta=
 
 if /I "%resposta%"=="S" ( schtasks /create /tn "Atualizacao_Sistema" /tr "%~f0" /sc weekly /d SUN /st 10:00 /rl highest /f msg * "O script foi agendado para rodar automaticamente todo domingo às 10h.")
+
 ⏰ Se o usuário aceitar ( S), o script será executado automaticamente todo domingo às 10h .
 
 🖥 Como usar?
