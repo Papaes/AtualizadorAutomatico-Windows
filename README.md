@@ -99,3 +99,9 @@ C:\Logs\Atualizacao_Log.txt
 ✔ Permite diagnóstico fácil com logs 📄
 
 ✔ Pode ser executado manualmente ou agendado ⏰
+
+
+
+👤 Autor
+
+https://github.com/Papaes
