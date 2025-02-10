@@ -1,10 +1,10 @@
-🚀 Script de Atualização e Verificação do Windows
+# 🚀 Script de Atualização e Verificação do Windows
 
-📌 Descrição
+# 📌 Descrição
 
 Este script automatiza a atualização de pacotes no Windows e realiza verificações de integridade do sistema, garantindo mais estabilidade e segurança .
 
-⚡ Principais funcionalidades:
+# ⚡ Principais funcionalidades:
 
 ✅ Atualizar todos os pacotes via Winget
 
@@ -17,7 +17,7 @@ Este script automatiza a atualização de pacotes no Windows e realiza verifica�
 ✅ Permite agendamento automático da execução
 
 
-🔧 Como funciona o Script?
+# 🔧 Como funciona o Script?
 
 1. Definição do Arquivo de Log
 
@@ -27,7 +27,7 @@ set LOGFILE=%USERPROFILE%\Desktop\Atualizacao_Log.txt
 
 📌 O log de execução será salvo na Área de Trabalho do usuário para facilitar a consulta.
 
-🚨 Problema Resolvido:
+# 🚨 Problema Resolvido:
 
 inicialmente, alguns usuários enfrentaram erros do tipo "O sistema não pode encontrar o caminho especificado.".
 Para corrigir isso, alteramos o caminho do log para C:\Logs , criando uma pasta manualmente, se necessário.
@@ -36,7 +36,7 @@ mkdir C:\Logs
 
 set LOGFILE=C:\Logs\Atualizacao_Log.txt
 
-🔄 2. Atualização de Pacotes com Winget
+# 🔄 2. Atualização de Pacotes com Winget
 
 winget upgrade --all --silent >> "%LOGFILE%" 2>&1
 
@@ -50,7 +50,7 @@ sfc /scannow >> "%LOGFILE%" 2>&1
 
 🔍 O comando SFC (System File Checker) analisa e repara arquivos relacionados do Windows.
 
-🏗 4. Diagnóstico e Reparo de Imagem do Windows (DISM)
+# 🏗 4. Diagnóstico e Reparo de Imagem do Windows (DISM)
 
 dism /online /cleanup-image /CheckHealth >> "%LOGFILE%" 2>&1
 
@@ -58,7 +58,7 @@ dism /online /cleanup-image /restorehealth >> "%LOGFILE%" 2>&1
 
 🛡 DISM (Deployment Image Servicing and Management) é usado para verificar e corrigir arquivos essenciais do sistema operacional.
 
-🔔 5. Notificações Visuais para o Usuário
+# 🔔 5. Notificações Visuais para o Usuário
 
 msg * "A atualização do sistema está começando. Por favor, aguarde."
 
@@ -66,7 +66,7 @@ msg * "A atualização e verificação do sistema foram concluídas! Confira o l
 
 📢 O usuário recebe alertas visuais no Windows informando o progresso e a conclusão da execução.
 
-⏳ 6. Pergunta sobre Agendamento Automático
+# ⏳ 6. Pergunta sobre Agendamento Automático
 
 echo Deseja agendar esse script para rodar automaticamente? (S/N)
 
@@ -76,7 +76,7 @@ if /I "%resposta%"=="S" ( schtasks /create /tn "Atualizacao_Sistema" /tr "%~f0" 
 
 ⏰ Se o usuário aceitar ( S), o script será executado automaticamente todo domingo às 10h .
 
-🖥 Como usar?
+# 🖥 Como usar?
 
 1️⃣ Baixe o script: 
 
@@ -88,7 +88,7 @@ if /I "%resposta%"=="S" ( schtasks /create /tn "Atualizacao_Sistema" /tr "%~f0" 
 
 C:\Logs\Atualizacao_Log.txt
 
-💡 Benefícios
+# 💡 Benefícios
 
 ✔ Mantenha o sistema atualizado automaticamente 🖥
 
